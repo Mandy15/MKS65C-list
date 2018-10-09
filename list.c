@@ -1,7 +1,20 @@
-struct node { int i; struct node *next };
+#include <stdio.h>
+#include <list.h>
 
-void print_list(struct node *);
+struct node { char s[32]; struct node *next };
 
-struct node * insert_front(Struct node *, int);
+void print_list(struct node *){
+	printf("\n");
+}
 
-struct node * free_list(struct node *);
+struct node * insert_front(struct node *, char){
+	struct node x;
+	x.s = "";
+	x.next = ;
+	return ;
+}
+
+struct node * free_list(struct node *){
+	free();
+	return ;
+}

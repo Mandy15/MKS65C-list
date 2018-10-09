@@ -1,11 +1,14 @@
-all: list.o
-	gcc -o list list.o
+all: test.o list.o
+	gcc -o test test.o list.o
 
-list.o: list.c
+test.o: test.c list.h
+	gcc -c test.c
+
+list.o: list.c list.h
 	gcc -c list.c
 
 clean:
-	rm list.o
+	rm test.o list.o
 
 run:
-	./list
+	./test
