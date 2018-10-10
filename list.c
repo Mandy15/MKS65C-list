@@ -3,18 +3,26 @@
 
 struct node { char s[32]; struct node *next };
 
-void print_list(struct node *){
-	printf("\n");
+void print_list(struct node * n){
+	printf("%s\n", n.s);
+	while(n.next != null){
+		n = n.next;
+		printf("%s\n", n.s);
+	}
 }
 
-struct node * insert_front(struct node *, char){
-	struct node x;
-	x.s = "";
-	x.next = ;
-	return ;
+struct node * insert_front(struct node * n, char){
+	struct node *x = malloc(32);
+	x.s = char;
+	x.next = n;
+	return x;
 }
 
-struct node * free_list(struct node *){
-	free();
+struct node * free_list(struct node * n){
+	while(n.next != null){
+		n = n.next;
+	}else{
+		free(n.next);
+	}
 	return ;
 }
