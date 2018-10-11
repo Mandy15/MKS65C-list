@@ -4,11 +4,11 @@
 #include "list.h"
 
 void print_list(struct node *n){
-	printf("%s\n", n->s);
-	while(n->next != NULL){
-		n = n->next;
+	while(n){
 		printf("%s\n", n->s);
+		n = n->next;
 	}
+	printf("\n");
 }
 
 struct node * insert_front(struct node *n, char str[32]){

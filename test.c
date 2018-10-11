@@ -2,10 +2,10 @@
 #include "list.h"
 
 int main(){
-	struct node *list;
+	struct node *list = NULL;
 
-	// printf("Print list:\n");
-	// print_list(list);
+	printf("Print list:\n");
+	print_list(list);
 
 	printf("Add new node to beginning:\n");
 	print_list(insert_front(list, "hey"));
